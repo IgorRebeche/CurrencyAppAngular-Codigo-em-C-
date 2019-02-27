@@ -1,0 +1,43 @@
+using System; 
+using System.Collections; 
+using System.Collections.Generic; 
+  
+public class GFG { 
+  
+    // Driver code 
+    public static void Main() 
+    { 
+		//Variaveis
+		int valor = 0, index = 0;
+		string condicao = "";
+        ArrayList Lista = new ArrayList(); //Lista 
+		GFG p = new GFG();
+		
+        // Adding elements to ArrayList 
+        Lista.Add("Hello"); 
+        Lista.Add("World"); 
+		
+		Console.WriteLine("Digite o valor do numero a ser procurado: ");
+		valor = int.Parse(Console.ReadLine());
+		
+		while(condicao != "n"){
+			
+            Console.WriteLine("Digite o numero de Index "+ index +" da lista: ");
+			Lista.Add(int.Parse(Console.ReadLine())); 
+			index++;
+			Console.WriteLine("Para parar de adicionar pressione n.\nPara continuar pressione enter");
+			condicao = Console.ReadLine();
+		}
+		p.searchvalue(valor, Lista);
+		
+    }
+	
+	public void searchvalue(int valor, ArrayList l){
+        if (l.Contains(valor)) {
+            Console.WriteLine("A lista contém o valor"); 
+		}else{
+            Console.WriteLine("Não, não contém"); 
+    } 
+		
+	}
+} 
